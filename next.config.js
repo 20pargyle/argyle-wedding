@@ -5,6 +5,7 @@ const nextConfig = {
     GOOGLE_SHEETS_PRIVATE_KEY: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
     SHEET_ID: process.env.SHEET_ID,
     SHEET_RANGE: process.env.SHEET_RANGE,
+    CLIENT_ID: process.env.CLIENT_ID,
   },
 };
 

@@ -4,24 +4,6 @@ import { google } from "googleapis";
 import { addressSchema } from "@/lib/schemas";
 
 export async function POST(req: Request) {
-  function authorize() {
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: "website@wedding-storage.iam.gserviceaccount.com",
-        client_id: process.env.CLIENT_ID,
-        private_key: (process.env.GOOGLE_SHEETS_PRIVATE_KEY || "").replace(
-          /\\n/g,
-          "\n"
-        ),
-      },
-      scopes: "https://www.googleapis.com/auth/spreadsheets",
-    });
-
-    const sheets = google.sheets({ version: "v4", auth });
-
-    return { sheets, auth };
-  }
-
   try {
     const body = await req.json();
     const { attending, city, lineOne, lineTwo, state, zip, email, name } =
@@ -45,9 +27,21 @@ export async function POST(req: Request) {
       ],
     ];
 
-    const { sheets } = authorize();
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: "website@wedding-storage.iam.gserviceaccount.com",
+        client_id: process.env.CLIENT_ID,
+        private_key: (process.env.GOOGLE_SHEETS_PRIVATE_KEY || "").replace(
+          /\\n/g,
+          "\n"
+        ),
+      },
+      scopes: "https://www.googleapis.com/auth/spreadsheets",
+    });
 
-    await sheets.spreadsheets.values.append({
+    const sheets = google.sheets({ version: "v4", auth });
+
+    const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       valueInputOption: "USER_ENTERED",
       range: process.env.SHEET_RANGE,
@@ -55,6 +49,8 @@ export async function POST(req: Request) {
         values: dataToSave,
       },
     });
+
+    console.log(response);
 
     return NextResponse.json("Success", { status: 201 });
   } catch (error) {
