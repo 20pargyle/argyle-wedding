@@ -7,12 +7,9 @@ import venmo from "../public/venmo.jpeg";
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Countdown from "@/components/countdown";
 
 export default function Home() {
-  const today = new Date().getTime();
-  const wedding = new Date("2023-12-19").getTime();
-  const countdown = Math.round((wedding - today) / (24 * 60 * 60 * 1000));
-
   return (
     <>
       <main>
@@ -24,7 +21,7 @@ export default function Home() {
             </h1>
             <div className="flex flex-col items-center gap-y-1 font-light text-lg sm:text-xl">
               <h2>DECEMBER 19, 2023 - HIGHLAND, UTAH</h2>
-              <h2>{countdown} DAYS TO GO</h2>
+              <Countdown />
             </div>
           </div>
         </section>
