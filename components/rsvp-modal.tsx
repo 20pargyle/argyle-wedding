@@ -29,17 +29,17 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 
-const events = [
-  { id: "sealing", name: "Sealing" },
-  { id: "luncheon", name: "Luncheon" },
-  { id: "ceremony", name: "Ring Ceremony" },
-  { id: "reception", name: "Reception" },
-];
-
 export default function RsvpModal() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [alreadyFilledOut, setAlreadyFilledOut] = useState(false);
+
+  const events = [
+    { id: "sealing", name: "Sealing" },
+    { id: "luncheon", name: "Luncheon" },
+    { id: "ceremony", name: "Ring Ceremony" },
+    { id: "reception", name: "Reception" },
+  ];
 
   useEffect(() => {
     setAlreadyFilledOut(!!localStorage.getItem("RSVP"));
