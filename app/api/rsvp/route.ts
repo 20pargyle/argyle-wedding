@@ -1,29 +1,20 @@
 import { NextResponse } from "next/server";
 import { google } from "googleapis";
 
-import { addressSchema } from "@/lib/schemas";
+import { rsvpSchema } from "@/lib/schemas";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { attending, city, lineOne, lineTwo, state, zip, email, name } =
-      addressSchema.parse(body);
-
-    const formattedAddy = `${lineOne}\n${
-      lineTwo !== "" ? lineTwo + "\n" : ""
-    }${city}, ${state} ${zip}`;
+    const { name, number, events } = rsvpSchema.parse(body);
 
     const dataToSave = [
       [
         name,
-        lineOne,
-        lineTwo,
-        city,
-        state,
-        zip,
-        email,
-        attending,
-        formattedAddy,
+        events.includes("sealing") ? number : 0,
+        events.includes("luncheon") ? number : 0,
+        events.includes("ceremony") ? number : 0,
+        events.includes("reception") ? number : 0,
       ],
     ];
 
@@ -44,7 +35,7 @@ export async function POST(req: Request) {
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       valueInputOption: "USER_ENTERED",
-      range: process.env.ADD_SHEET_RANGE,
+      range: process.env.RSVP_SHEET_RANGE,
       requestBody: {
         values: dataToSave,
       },

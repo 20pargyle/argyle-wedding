@@ -8,6 +8,7 @@ import venmo from "../public/venmo.jpeg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Countdown from "@/components/countdown";
+import RsvpAlert from "@/components/rsvp-alert";
 
 export default function Home() {
   return (
@@ -42,7 +43,13 @@ export default function Home() {
           </ul>
         </nav>
         <section className="max-w-5xl md:mx-auto mb-8">
-          <Image src={mainImage} alt="Megan and Carter" className="p-4" />
+          <RsvpAlert />
+          <Image
+            src={mainImage}
+            alt="Megan and Carter"
+            className="p-4"
+            priority
+          />
         </section>
         <section
           id="story"
