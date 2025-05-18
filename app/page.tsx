@@ -2,8 +2,8 @@ import AddressForm from "@/components/address-form";
 import Image from "next/image";
 
 import title from "../public/title.svg";
-import mainImage from "../public/main.jpeg";
-import venmo from "../public/venmo.jpeg";
+import mainImage from "../public/main.jpg";
+import venmo from "../public/venmo.jpg";
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -16,12 +16,11 @@ export default function Home() {
       <main>
         <section id="home" className="flex items-center justify-center">
           <div className="flex flex-col items-center p-4">
-            <Image src={title} alt="Our Day" priority className="pl-6" />
-            <h1 className="font-light text-4xl sm:text-7xl tracking-wide mb-10">
-              MEG & CARTER
+            <h1 className="font-light text-4xl sm:text-7xl tracking-wide mb-10 mt-14">
+              PARKER & HANNAH
             </h1>
             <div className="flex flex-col items-center gap-y-1 font-light text-lg sm:text-xl">
-              <h2>DECEMBER 19, 2023 - HIGHLAND, UTAH</h2>
+              <h2>AUGUST 6, 2025</h2>
               <Countdown />
             </div>
           </div>
@@ -42,11 +41,10 @@ export default function Home() {
             </li>
           </ul>
         </nav>
-        <section className="max-w-5xl md:mx-auto mb-8">
-          <RsvpAlert />
+        <section className="max-w-6xl md:mx-auto mb-8">
           <Image
             src={mainImage}
-            alt="Megan and Carter"
+            alt="Parker and Hannah"
             className="p-4"
             priority
           />
@@ -83,12 +81,9 @@ export default function Home() {
         </section>
         <section id="address" className="sm:flex justify-center my-8 p-4">
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl sm:text-4xl font-light">
-              REQUEST AN INVATATION
+            <h2 className="text-2xl sm:text-4xl font-light mb-8">
+              REQUEST AN ANNOUCNEMENT
             </h2>
-            <p className="font-light text-md sm:text-xl mb-8">
-              COME CELEBRATE WITH US.
-            </p>
             <AddressForm />
           </div>
         </section>
@@ -140,20 +135,19 @@ export default function Home() {
         <section className="flex justify-center">
           <div className="max-w-sm mx-auto p-4">
             <a
-              href="https://account.venmo.com/u/Carter-Singletary"
+              href="https://account.venmo.com/u/hannah_banana136"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={venmo} alt="venmo @carter-singletary" />
+              <Image src={venmo} alt="venmo @hannah_banana136" />
             </a>
           </div>
         </section>
       </main>
       <footer className="w-full p-8">
         <div className="flex flex-col items-center">
-          <p className="font-light mb-4">Designed by Meg & Carter</p>
           <p className="text-sm font-light">
-            Copyright &copy; 2023 Carter Singletary
+            Design &copy; 2023 Carter Singletary
           </p>
         </div>
       </footer>

@@ -167,7 +167,7 @@ export default function AddressForm() {
                   </PopoverTrigger>
                   <PopoverContent className="w-[200px] p-0">
                     <Command>
-                      <CommandInput placeholder="Search language..." />
+                      <CommandInput placeholder="Search states..." />
                       <CommandEmpty>No state found.</CommandEmpty>
                       <CommandGroup>
                         {states.map((state) => (
@@ -229,48 +229,6 @@ export default function AddressForm() {
                 </FormControl>
                 <FormDescription>
                   We need this so we can update you, just in case.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="attending"
-            render={({ field }) => (
-              <FormItem className="space-y-3">
-                <FormLabel>Are you planning to attend?</FormLabel>
-                <FormControl>
-                  <RadioGroup
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                    className="flex flex-col space-y-1"
-                  >
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="yes" disabled={loading} />
-                      </FormControl>
-                      <FormLabel className="font-normal">For sure!</FormLabel>
-                    </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="maybe" disabled={loading} />
-                      </FormControl>
-                      <FormLabel className="font-normal">Maybe...</FormLabel>
-                    </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="no" disabled={loading} />
-                      </FormControl>
-                      <FormLabel className="font-normal">
-                        Can&apos;t make it.
-                      </FormLabel>
-                    </FormItem>
-                  </RadioGroup>
-                </FormControl>
-                <FormDescription>
-                  We ask just so we have a rough idea of how many people are
-                  coming.
                 </FormDescription>
                 <FormMessage />
               </FormItem>

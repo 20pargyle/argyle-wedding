@@ -13,14 +13,13 @@ export async function POST(req: Request) {
         name,
         events.includes("sealing") ? number : 0,
         events.includes("luncheon") ? number : 0,
-        events.includes("ceremony") ? number : 0,
         events.includes("reception") ? number : 0,
       ],
     ];
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
-        client_email: "website@wedding-storage.iam.gserviceaccount.com",
+        client_email: "website@propane-landing-459003-a1.iam.gserviceaccount.com",
         client_id: process.env.CLIENT_ID,
         private_key: (process.env.GOOGLE_SHEETS_PRIVATE_KEY || "").replace(
           /\\n/g,

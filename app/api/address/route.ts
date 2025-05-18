@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
-        client_email: "website@wedding-storage.iam.gserviceaccount.com",
+        client_email: "website@propane-landing-459003-a1.iam.gserviceaccount.com",
         client_id: process.env.CLIENT_ID,
         private_key: (process.env.GOOGLE_SHEETS_PRIVATE_KEY || "").replace(
           /\\n/g,
@@ -53,6 +53,7 @@ export async function POST(req: Request) {
     console.log(response);
 
     return NextResponse.json("Success", { status: 201 });
+    
   } catch (error) {
     console.error(error);
     return NextResponse.json("Something went wrong", { status: 500 });
