@@ -6,7 +6,7 @@ import { Lato } from "next/font/google";
 import ToastProvider from "@/components/toast-provider";
 
 export const metadata: Metadata = {
-  title: "Meg and Carter",
+  title: "Parker & Hannah",
   description: "A Wedding Website",
 };
 
