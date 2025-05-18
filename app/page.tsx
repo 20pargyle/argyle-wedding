@@ -56,21 +56,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4">
             <h2 className="text-2xl sm:text-4xl font-light">OUR STORY</h2>
             <p className="font-light text-center">
-              Meeting was the absolute last thing either of us expected, but one
-              of the greatest blessings of our lives. It seems like a million
-              strings had to be pulled and a million redirections had to be
-              taken for us to just sit next to each other in an institute class
-              on the second day of school. Having both just returned from our
-              missions five weeks earlier, we hit it off instantly and went on
-              our first date just two hours after meeting, a very spontaneous
-              and slightly less than romantic trip to Utah State&apos;s very own
-              Taco Time. (USU&apos;s dining hall is one thing about their campus
-              that needs a serious update, so you can imagine greasy tables and
-              ultimately the picture of class.) Somehow it still worked, and due
-              to Carter&apos;s stalking habits, accidentally becoming a couple
-              one week in, and an endless amount of good car talks, we have
-              spent every possible day together since that first time we charmed
-              each other&apos;s socks off at Taco Time :)
+              To be written.....
             </p>
             <p className="font-light text-center max-w-2xl mx-auto">
               We love you all and are so excited to celebrate our big day with
@@ -100,7 +86,7 @@ export default function Home() {
                 couple needs. Tons of options for every price point.
               </p>
               <a
-                href="https://www.amazon.com/wedding/registry/26AW4LWEACM09"
+                href="https://www.amazon.com/hz/wishlist/ls/JGZDRWT1WUEK"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
@@ -119,7 +105,7 @@ export default function Home() {
                 style.
               </p>
               <a
-                href="https://www.ikea.com/us/en/gift-registry/guest/?id=5a2583a7-95ba-4c54-8f8a-f8680e5b457e"
+                href="https://www.ikea.com/us/en/gift-registry/guest/?id=b23b1e11-7905-4e30-9301-7189af971697"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
