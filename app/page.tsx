@@ -1,7 +1,6 @@
 import AddressForm from "@/components/address-form";
 import Image from "next/image";
 
-import title from "../public/title.svg";
 import mainImage from "../public/main.jpg";
 import venmo from "../public/venmo.jpg";
 
@@ -39,6 +38,10 @@ export default function Home() {
               <a href="#registry">REGISTRY</a>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black" />
             </li>
+            <li className="group">
+              <a href="/album">PHOTOS</a>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black" />
+            </li>
           </ul>
         </nav>
         <section className="max-w-6xl md:mx-auto mb-8">
@@ -51,17 +54,33 @@ export default function Home() {
         </section>
         <section
           id="story"
-          className="max-w-4xl p-4 mx-auto flex justify-center my-8"
+          className="max-w-5xl p-4 mx-auto flex justify-left my-8"
         >
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 font-light">
             <h2 className="text-2xl sm:text-4xl font-light">OUR STORY</h2>
-            <p className="font-light text-center">
-              To be written.....
+            <p>
+              One sunny summer day in Salt Lake City Utah (while Hannah and Parker were both working as summer camp counselors) Hannah walked up to Parker, intending to start a conversation and compliment his glasses.<br/>Parker... apparently wasn't super down to talk (he does not remember this). <br/> Luckily for Parker, he'd have another chance -- that wasn't the only time they'd meet that summer.
             </p>
-            <p className="font-light text-center max-w-2xl mx-auto">
-              We love you all and are so excited to celebrate our big day with
-              you. Thank you for being there and for loving us as much as we
-              love you!!
+            <p>
+              Parker was supposed to do a week of camp in Montana in late July, but received a call that week in Salt Lake - apparently there already were enough people for that week of camp, so they asked if he would do one in California instead.<br />He said no.<br />How about Moscow, ID then? 
+            </p>
+            <p>
+              So... a few weeks later, Hannah also happens to be going to Moscow, ID. They chat for a little bit in the airport, and go to dinner with a small group that evening.
+            </p>
+            <p>
+              As the first week goes on, start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker's number (She does not remember this).
+            </p>
+            <p>
+              Conversations turn into walks around campus during breaks, hanging out during dinner, leading to spending that entire Saturday together, ending in a 5-hour conversation that only ends because it's 11PM and the sprinklers suddenly turn on.
+            </p>
+            <p>
+              Now the problem.... they live 2 hours apart. After spending a month apart, they chat and decide to start dating despite the distance.
+            </p>
+            <p>
+              Somehow, we survived 8 months of long-distance - only little dates every other weekend and lots of calls. But it worked! 
+            </p>
+            <p>
+              Thanks so much to everyone that has helped us with places to stay, rides to/from Logan & Provo and everything inbetween.
             </p>
           </div>
         </section>
@@ -133,7 +152,7 @@ export default function Home() {
       <footer className="w-full p-8">
         <div className="flex flex-col items-center">
           <p className="text-sm font-light">
-            Design &copy; 2023 Carter Singletary
+            Initial Design &copy; 2023 Carter Singletary
           </p>
         </div>
       </footer>
