@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <section id="home" className="flex items-center justify-center">
           <div className="flex flex-col items-center p-4">
-            <h1 className="font-light text-4xl sm:text-7xl tracking-wide mb-10 mt-14">
+            <h1 className="font-light text-4xl sm:text-7xl tracking-wide mb-10 mt-14 text-center text-[#214b49]">
               PARKER & HANNAH
             </h1>
             <div className="flex flex-col items-center gap-y-1 font-light text-lg sm:text-xl">
@@ -25,13 +25,13 @@ export default function Home() {
           </div>
         </section>
         <nav className="flex justify-center p-4">
-          <ul className="flex gap-10 font-light">
+          <ul className="flex gap-4 font-light justify-center flex-wrap text-center max-lg:underline">
             <li className="group">
               <a href="#story">OUR STORY</a>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black" />
             </li>
             <li className="group">
-              <a href="#address">ADDRESS</a>
+              <a href="#address">GIVE ADDRESS</a>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black" />
             </li>
             <li className="group">
@@ -54,17 +54,16 @@ export default function Home() {
         </section>
         <section
           id="story"
-          className="max-w-5xl p-4 mx-auto flex justify-left my-8"
+          className="max-w-5xl p-4 mx-auto flex justify-left my-4"
         >
           <div className="flex flex-col items-center gap-4 font-light">
-            <h2 className="text-2xl sm:text-4xl font-light">OUR STORY</h2>
+            <h2 className="text-2xl sm:text-4xl font-light text-[#214b49]">OUR STORY</h2>
             <p className="font-light text-center">
-              One sunny summer day in Salt Lake City Utah (while Hannah and Parker were both working as summer camp counselors) Hannah walked up to Parker, intending to start a conversation and compliment his glasses. Parker... apparently apparently didn&apos;t say much or seem very interested in chatting (he does not remember this). Luckily for Parker, he&apos;d have another chance -- that wasn&apos;t the only time they&apos;d meet that summer.
-              Parker was supposed to do a week of camp in Montana in late July, but received a call that week in Salt Lake - apparently there already were enough people for that week of camp, so they asked if he would do one in California instead. He said no. How about Moscow, ID then? He agrees. Turns out -- Hannah is going to be there too.
+              One sunny summer day in Salt Lake City, Utah (while Hannah and Parker were both working as summer camp counselors) Hannah walked up to Parker, intending to start a conversation and compliment his glasses. Parker... apparently didn&apos;t seem very interested in chatting (he does not remember this). Luckily for Parker, he&apos;d have another chance -- that wasn&apos;t the only time they&apos;d meet that summer.
+              Parker was assigned to work a week in Montana in late July, but received a call in Salt Lake, asking if he would do one in Moscow, ID instead. Turns out -- Hannah was going to be there too.
             </p>
             <p className="font-light text-center">
-              So... a few weeks later, they reconnect in the airport, and have a short conversation before Parker goes and sits a few too many chairs away to eat his food and do something on his phone. Once they arrive, they go to dinner in the same small group.
-              As the first week goes on, they start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker&apos;s number (she does not remember this).
+              So... a few weeks later, they reconnect in the airport, heading to Moscow. As the first week goes on, they start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker&apos;s number (she does not remember this).
               Small conversations and jokes turn into walks around campus during their breaks and hanging out during dinner. By Saturday, they are spending the entire day together, ending in a 5-hour conversation on some patch of lawn. It only ends because sprinklers suddenly turn on and they frantically run inside, trying to stay dry.<br />Great story, right? This should be an easy decision and relationship! Just one tiny problem -- the schools they attend are 2 hours apart. 
             </p>
             <p className="font-light text-center">
@@ -79,7 +78,7 @@ export default function Home() {
         </section>
         <section id="address" className="sm:flex justify-center my-8 p-4">
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl sm:text-4xl font-light mb-8">
+            <h2 className="text-2xl sm:text-4xl font-light mb-8 text-center text-[#214b49]">
               REQUEST AN ANNOUNCEMENT
             </h2>
             <AddressForm />
@@ -89,7 +88,7 @@ export default function Home() {
           id="registry"
           className="flex flex-col items-center my-8 p-4 font-light gap-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-2xl sm:text-4xl">REGISTRY</h2>
+          <h2 className="text-2xl sm:text-4xl text-[#214b49]">REGISTRY</h2>
           <div className="w-full flex flex-col gap-y-8 md:flex-row items-center gap-x-2 md:justify-around">
             <div className="flex flex-col items-center max-w-sm gap-4 p-4 border rounded ">
               <h3 className="text-xl">Amazon.com</h3>
