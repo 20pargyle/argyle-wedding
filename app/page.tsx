@@ -65,15 +65,15 @@ export default function Home() {
             <p className="font-light text-center">
               So... a few weeks later, they reconnect in the airport, and have a short conversation before Parker goes and sits a few too many chairs away to eat his food and do something on his phone. Once they arrive, they go to dinner in the same small group.
               As the first week goes on, they start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker&apos;s number (she does not remember this).
-              Small conversations and jokes turn into walks around campus during their breaks and hanging out during dinner. By Saturday, they are spending the entire day together, ending in a 5-hour conversation on some patch of lawn that only ends because it&apos;s 11PM and the sprinklers suddenly turn on.
-              Just one tiny problem -- they live 2 hours apart. 
+              Small conversations and jokes turn into walks around campus during their breaks and hanging out during dinner. By Saturday, they are spending the entire day together, ending in a 5-hour conversation on some patch of lawn. It only ends because sprinklers suddenly turn on and they frantically run inside, trying to stay dry.<br />Great story, right? This should be an easy decision and relationship! Just one tiny problem -- the schools they attend are 2 hours apart. 
             </p>
             <p className="font-light text-center">
-              After about a month, once school starts and they are both back in Utah (but still 2 hours apart), somehow it works out to have 2 dates in a week. After the second, they chat and decide to start dating despite the distance.
-              Now, somehow, they survived 8 months of long-distance; Short dates every other weekend with lots of calls and voice messages during the week. But it worked and it&apos;s over! That shared trial has drawn them closer together and closer to God.
+              After about a month, they are both back in Utah for school and somehow it works out to have 2 dates in the first week. After the second, they chat and decide to start dating despite the 100 miles between them.
+              Now, somehow, they survived 8 months of long-distance; Short dates every other weekend with lots of calls and voice messages during the week.
             </p>
-            <p className="font-light text-center max-w-2xl mx-auto">
-              Thanks so much to everyone that has helped us with places to stay, rides, and everything inbetween. We owe you a ton!
+            <p className="font-light text-center">
+              But it worked and it&apos;s over! That shared trial has drawn them closer together and closer to God.
+              Thanks so much to everyone that has helped us with places to stay, rides, and everything in between. We owe you a ton!
             </p>
           </div>
         </section>
@@ -94,7 +94,7 @@ export default function Home() {
             <div className="flex flex-col items-center max-w-sm gap-4 p-4 border rounded ">
               <h3 className="text-xl">Amazon.com</h3>
               <p className="text-center">
-                Full of the miscellaneous stuff n&apos; things that every new
+                Full of the miscellaneous stuff that every new
                 couple needs. Tons of options for every price point.
               </p>
               <a
@@ -112,9 +112,8 @@ export default function Home() {
             <div className="flex flex-col items-center max-w-sm gap-4 p-4 border rounded ">
               <h3 className="text-xl">Ikea.com</h3>
               <p className="text-center">
-                Full of homegoods to turn any scary basement apartment into a
-                warm welcoming abode. Find something on our list that shows your
-                style.
+                Home goods that can turn any scary basement apartment into a
+                warm welcoming abode.
               </p>
               <a
                 href="https://www.ikea.com/us/en/gift-registry/guest/?id=b23b1e11-7905-4e30-9301-7189af971697"
@@ -132,6 +131,7 @@ export default function Home() {
         </section>
         <section className="flex justify-center">
           <div className="max-w-sm mx-auto p-4">
+            <p className="text-center">Contribute to our honeymoon through Venmo!</p>
             <a
               href="https://account.venmo.com/u/hannah_banana136"
               target="_blank"
@@ -144,8 +144,8 @@ export default function Home() {
       </main>
       <footer className="w-full p-8">
         <div className="flex flex-col items-center">
-          <p className="text-sm font-light">
-            Initial Design &copy; 2023 Carter Singletary
+          <p className="text-sm font-light text-center">
+            Initial Design &copy; 2023 Carter Singletary<br />Current Version &copy; Parker Argyle
           </p>
         </div>
       </footer>
