@@ -58,36 +58,29 @@ export default function Home() {
         >
           <div className="flex flex-col items-center gap-4 font-light">
             <h2 className="text-2xl sm:text-4xl font-light">OUR STORY</h2>
-            <p>
-              One sunny summer day in Salt Lake City Utah (while Hannah and Parker were both working as summer camp counselors) Hannah walked up to Parker, intending to start a conversation and compliment his glasses.<br/>Parker... apparently wasn't super down to talk (he does not remember this). <br/> Luckily for Parker, he'd have another chance -- that wasn't the only time they'd meet that summer.
+            <p className="font-light text-center">
+              One sunny summer day in Salt Lake City Utah (while Hannah and Parker were both working as summer camp counselors) Hannah walked up to Parker, intending to start a conversation and compliment his glasses. Parker... apparently apparently didn&apos;t say much or seem very interested in chatting (he does not remember this). Luckily for Parker, he&apos;d have another chance -- that wasn&apos;t the only time they&apos;d meet that summer.
+              Parker was supposed to do a week of camp in Montana in late July, but received a call that week in Salt Lake - apparently there already were enough people for that week of camp, so they asked if he would do one in California instead. He said no. How about Moscow, ID then? He agrees. Turns out -- Hannah is going to be there too.
             </p>
-            <p>
-              Parker was supposed to do a week of camp in Montana in late July, but received a call that week in Salt Lake - apparently there already were enough people for that week of camp, so they asked if he would do one in California instead.<br />He said no.<br />How about Moscow, ID then? 
+            <p className="font-light text-center">
+              So... a few weeks later, they reconnect in the airport, and have a short conversation before Parker goes and sits a few too many chairs away to eat his food and do something on his phone. Once they arrive, they go to dinner in the same small group.
+              As the first week goes on, they start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker&apos;s number (she does not remember this).
+              Small conversations and jokes turn into walks around campus during their breaks and hanging out during dinner. By Saturday, they are spending the entire day together, ending in a 5-hour conversation on some patch of lawn that only ends because it&apos;s 11PM and the sprinklers suddenly turn on.
+              Just one tiny problem -- they live 2 hours apart. 
             </p>
-            <p>
-              So... a few weeks later, Hannah also happens to be going to Moscow, ID. They chat for a little bit in the airport, and go to dinner with a small group that evening.
+            <p className="font-light text-center">
+              After about a month, once school starts and they are both back in Utah (but still 2 hours apart), somehow it works out to have 2 dates in a week. After the second, they chat and decide to start dating despite the distance.
+              Now, somehow, they survived 8 months of long-distance; Short dates every other weekend with lots of calls and voice messages during the week. But it worked and it&apos;s over! That shared trial has drawn them closer together and closer to God.
             </p>
-            <p>
-              As the first week goes on, start to talk more and more. After a conversation on Tuesday, Hannah asks for Parker's number (She does not remember this).
-            </p>
-            <p>
-              Conversations turn into walks around campus during breaks, hanging out during dinner, leading to spending that entire Saturday together, ending in a 5-hour conversation that only ends because it's 11PM and the sprinklers suddenly turn on.
-            </p>
-            <p>
-              Now the problem.... they live 2 hours apart. After spending a month apart, they chat and decide to start dating despite the distance.
-            </p>
-            <p>
-              Somehow, we survived 8 months of long-distance - only little dates every other weekend and lots of calls. But it worked! 
-            </p>
-            <p>
-              Thanks so much to everyone that has helped us with places to stay, rides to/from Logan & Provo and everything inbetween.
+            <p className="font-light text-center max-w-2xl mx-auto">
+              Thanks so much to everyone that has helped us with places to stay, rides, and everything inbetween. We owe you a ton!
             </p>
           </div>
         </section>
         <section id="address" className="sm:flex justify-center my-8 p-4">
           <div className="flex flex-col items-center">
             <h2 className="text-2xl sm:text-4xl font-light mb-8">
-              REQUEST AN ANNOUCNEMENT
+              REQUEST AN ANNOUNCEMENT
             </h2>
             <AddressForm />
           </div>
