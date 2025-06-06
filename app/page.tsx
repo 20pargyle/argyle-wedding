@@ -97,7 +97,7 @@ export default function Home() {
                 couple needs. Tons of options for every price point.
               </p>
               <a
-                href="https://www.amazon.com/hz/wishlist/ls/JGZDRWT1WUEK"
+                href="https://www.amazon.com/wedding/registry/CXAEIW0N4XOQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
