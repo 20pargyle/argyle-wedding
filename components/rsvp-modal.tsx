@@ -18,7 +18,7 @@ import {
 } from "./ui/form";
 import { rsvpSchema } from "@/lib/schemas";
 import { Input } from "./ui/input";
-import { Checkbox } from "./ui/checkbox";
+import { RadioNew, RadioItem } from "./ui/radio";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -28,17 +28,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import { RadioGroup } from "./ui/radio-group";
 
 export default function RsvpModal() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [alreadyFilledOut, setAlreadyFilledOut] = useState(false);
 
-  const events = [
-    { id: "sealing", name: "Sealing" },
-    { id: "luncheon", name: "Luncheon" },
-    { id: "ceremony", name: "Ring Ceremony" },
-    { id: "reception", name: "Reception" },
+  const responses = [
+    { id: "yes", name: "Yes!" },
+    { id: "no", name: "No :(" },
+    { id: "maybe", name: "Maybe" },
   ];
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function RsvpModal() {
     resolver: zodResolver(rsvpSchema),
     defaultValues: {
       name: "",
-      events: ["reception"],
+      rsvpResponse: "yes",
       number: 1,
     },
   });
@@ -73,18 +73,10 @@ export default function RsvpModal() {
   }
 
   return (
-    <Dialog open={open} onOpenChange={() => setOpen((value) => !value)}>
-      <DialogTrigger asChild>
-        <Button className="bg-teal-800 hover:bg-teal-700">RSVP</Button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>RSVP</DialogTitle>
-          <DialogDescription>Fill out the form below.</DialogDescription>
-        </DialogHeader>
-        {!alreadyFilledOut ? (
+    <>
+      {!alreadyFilledOut ? (
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-[40%]">
               <FormField
                 control={form.control}
                 name="name"
@@ -93,7 +85,7 @@ export default function RsvpModal() {
                     <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="e.g. John Doe"
+                        placeholder="e.g. the John Doe family"
                         disabled={loading}
                         {...field}
                       />
@@ -104,52 +96,24 @@ export default function RsvpModal() {
               />
               <FormField
                 control={form.control}
-                name="events"
-                render={() => (
-                  <FormItem>
+                name="rsvpResponse"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col items-start space-x-3 space-y-0">
                     <div className="mb-4">
-                      <FormLabel className="text-base">Events</FormLabel>
-                      <FormDescription>
-                        Select the events you will be attending.
-                      </FormDescription>
+                      <FormLabel className="text-base">Reception</FormLabel>
+                      <FormDescription>Can you make it to our reception in Spanish Fork?</FormDescription>
                     </div>
-                    {events.map((event) => (
-                      <FormField
-                        key={event.id}
-                        control={form.control}
-                        name="events"
-                        render={({ field }) => {
-                          return (
-                            <FormItem
-                              key={event.id}
-                              className="flex flex-row items-start space-x-3 space-y-0"
-                            >
-                              <FormControl>
-                                <Checkbox
-                                  checked={field.value?.includes(event.id)}
-                                  disabled={loading}
-                                  onCheckedChange={(checked) => {
-                                    return checked
-                                      ? field.onChange([
-                                          ...field.value,
-                                          event.id,
-                                        ])
-                                      : field.onChange(
-                                          field.value?.filter(
-                                            (value) => value !== event.id
-                                          )
-                                        );
-                                  }}
-                                />
-                              </FormControl>
-                              <FormLabel className="font-normal">
-                                {event.name}
-                              </FormLabel>
-                            </FormItem>
-                          );
-                        }}
-                      />
-                    ))}
+
+                    <FormControl>
+                      <RadioNew value={field.value} onValueChange={field.onChange}>
+                        {responses.map((response) => (
+                          <div className="flex items-center gap-3">
+                            <RadioItem key={response.id} value={response.id} id={response.id}></RadioItem>
+                            <label htmlFor={response.id}>{response.name}</label>
+                          </div>
+                        ))}
+                      </RadioNew>
+                    </FormControl>      
                     <FormMessage />
                   </FormItem>
                 )}
@@ -172,14 +136,13 @@ export default function RsvpModal() {
               </Button>
             </form>
           </Form>
-        ) : (
-          <div className="flex items-center justify-center h-40">
-            <p>
-              You have already RSVP&apos;d! No need to submit another response.
-            </p>
-          </div>
-        )}
-      </DialogContent>
-    </Dialog>
+      ) : (
+        <div className="flex items-center justify-center h-40">
+          <p>
+            You have already RSVP&apos;d! No need to submit another response.
+          </p>
+        </div>
+      )}
+    </>
   );
 }

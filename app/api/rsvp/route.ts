@@ -6,14 +6,13 @@ import { rsvpSchema } from "@/lib/schemas";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, number, events } = rsvpSchema.parse(body);
+    const { name, number, rsvpResponse } = rsvpSchema.parse(body);
 
     const dataToSave = [
       [
         name,
-        events.includes("sealing") ? number : 0,
-        events.includes("luncheon") ? number : 0,
-        events.includes("reception") ? number : 0,
+        number,
+        rsvpResponse
       ],
     ];
 
