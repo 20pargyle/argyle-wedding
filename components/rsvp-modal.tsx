@@ -107,8 +107,8 @@ export default function RsvpModal() {
                     <FormControl>
                       <RadioNew value={field.value} onValueChange={field.onChange}>
                         {responses.map((response) => (
-                          <div className="flex items-center gap-3">
-                            <RadioItem key={response.id} value={response.id} id={response.id}></RadioItem>
+                          <div className="flex items-center gap-3" key={response.id}>
+                            <RadioItem value={response.id} id={response.id}></RadioItem>
                             <label htmlFor={response.id}>{response.name}</label>
                           </div>
                         ))}
